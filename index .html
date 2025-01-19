@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ Tình Crush</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+
+    <div class="container" id="welcome-screen">
+        <h1>Xin chào!</h1>
+        <p>Bạn có muốn tiếp tục không?</p>
+        <button onclick="showPasswordInput()">Có</button>
+        <button onclick="showCustomMessage('Không sao, chúc bạn một ngày tốt lành!')">Không</button>
+    </div>
+
+    <div class="container hidden" id="password-screen">
+        <h1>Nhập mật khẩu</h1>
+        <input type="password" id="password" placeholder="Mật khẩu" />
+        <br /><br />
+        <button onclick="checkPassword()">Xác nhận</button>
+    </div>
+
+    <div class="card" id="love-card">
+        <div class="image-section"></div>
+        <div class="text-section">Hí vợ yêu!!! Thì là chồng chỉ muống nói với 
+            vợ yêu là chồng yêu vợ nhắm đấy vợ yêu có biết không-.- (Chắc không biết)
+            , Thì nhiều lúc cũng làm vợ yêu buồn khóc khóc nhưng mờ nó cũng qua rồi
+             thì cx do tính chồng nên chòng sẽ sửa mà vợ yêu gây sự ít thoi -.- Thôi tóm lại Chồng yêu vợ rất nhìu ...</div>
+    </div>
+
+    <div class="notification" id="notification">
+        <p id="notification-text"></p>
+        <button style="margin-right: auto; margin-left: auto;" onclick="closeNotification()">Đóng</button>
+    </div>
+
+    <audio id="bg-music" src="y2mate.com - I Do  911 Lyrics  Vietsub.mp3"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>

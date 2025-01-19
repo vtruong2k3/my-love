@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+body {
+    margin: 0;
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff6f61;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+input[type="password"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+input[type="password"]:focus {
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+}
+.notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: slideDown 0.5s forwards;
+}
+.notification p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+.notification button {
+    margin-top: 10px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.notification button:hover {
+    background: #ff4f41;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 50%;
+    }
+}
+.card {
+    position: relative;
+    display: none;
+    width: 600px;
+    min-width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    transform: scale(0);
+    animation: openCard 1s forwards;
+}
+.card .image-section {
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: url('https://cdn.pixabay.com/photo/2018/01/22/01/08/heart-3097905_640.jpg') no-repeat center center;
+    background-size: cover;
+}
+.card .text-section {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeInText 1.5s forwards 1s;
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes openCard {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.heart {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+    background-size: contain;
+    animation: float 4s infinite ease-in-out;
+    opacity: 0.8;
+  
+}
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-200px) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px) scale(1);
+        opacity: 0;
+    }
+}
+@media (max-width: 700px ){
+    .card{
+        margin: 0px 10px;
+        padding: 0px 10px;
+    }
+    .card .text-section{
+        
+        font-size: 1rem;
+       
+    }
+}

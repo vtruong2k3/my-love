@@ -17,7 +17,7 @@ function closeNotification() {
 
 function checkPassword() {
     const password = document.getElementById('password').value;
-    if (password === '142003') {
+    if (password === '221223') {
         document.getElementById('password-screen').classList.add('hidden');
         const card = document.getElementById('love-card');
         card.style.display = 'block';
